@@ -20,7 +20,7 @@
             <li><a style="color:white;" href="contact?${contact.id}">Contact</a></li>
         </ul> 
         <ul>
-            <div style="color:white;">© 2020 Copyright:
+            <div style="color:white;">Å  2020 Copyright:
                 <a style="color:white; font-weight:bold;" href="https://htmlsimple.com/"> HTMLsimple.com</a>
             </div>
         </ul>
