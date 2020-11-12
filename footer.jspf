@@ -1,0 +1,38 @@
+<div id="footer">
+    <style>
+        li {
+            float: left;
+          }
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+        }
+    </style>
+
+    <p>
+        <ul id="navdown">
+            <li><a style="color:white;" href="home?${home.id}">HTML Generator</a></li>
+            <li><a style="color:white;" href="test?${test.id}">Test Your Knowledge</a></li>
+            <li><a style="color:white;" href="resources?${resources.id}">Additional Resources</a></li>
+            <li><a style="color:white;" href="contact?${contact.id}">Contact</a></li>
+        </ul> 
+        <ul>
+            <div style="color:white;">© 2020 Copyright:
+                <a style="color:white; font-weight:bold;" href="https://htmlsimple.com/"> HTMLsimple.com</a>
+            </div>
+        </ul>
+    </p>
+   
+
+    
+    
+            </div>
+        </div>
+         
+        
+    </body>
+</html>
+

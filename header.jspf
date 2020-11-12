@@ -1,0 +1,47 @@
+<%@page contentType="text/html" pageEncoding="UTF-8" language="java"%>
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/home.css">
+        <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/menubar.css">
+        <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/tabs.css">
+        <title>HTML simple</title>
+        
+    </head>
+    <body>
+        <a href="#">
+            <img src="https://source.unsplash.com/125x125/?nature,water" id="logo" alt="HTML simple logo">
+        </a>
+        <div class="topnav" id="topmenu">
+            <a class="btn active" href="home?${home.id}">HTML Generator</a>
+            <a class="btn" href="test?${test.id}">Test Your Knowledge</a>
+            <a class="btn" href="resources?${resources.id}">Additional Resources</a>
+            <a class="btn" href="contact?${contact.id}">Contact</a>
+        </div>
+        <script>
+            // Get the container element
+            var btnContainer = document.getElementById("topmenu");
+
+            // Get all buttons with class="btn" inside the container
+            var btns = btnContainer.getElementsByClassName("btn");
+
+            // Loop through the buttons and add the active class to the current/clicked button
+            for (var i = 0; i < btns.length; i++) {
+              btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+
+                // If there's no active class
+                if (current.length > 0) { 
+                  current[0].className = current[0].className.replace(" active", "");
+                }
+
+                // Add the active class to the current/clicked button
+                this.className += " active";
+              });
+            }
+        </script>
+        <div id="main">
+            <div id="header">
+            </div>
