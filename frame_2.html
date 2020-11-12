@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+    <head>
+        <link rel="stylesheet" href="../css/verticalmenu.css" type="text/css"/>
+
+        <title>Frame1</title>
+    <script>
+        function openProblem(evt, probNum) {
+            // Declare all variables
+            var i, verticalmenucontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            verticalmenucontent = document.getElementsByClassName("verticalmenucontent");
+            for (i = 0; i < verticalmenucontent.length; i++) {
+              verticalmenucontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+              tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the link that opened the tab
+            document.getElementById(probNum).style.display = "block";
+            evt.currentTarget.className += " active";
+          }
+    </script>
+    </head>
+    <body> 
+        <div class="verticalmenu">
+            <button class="tablinks active" onclick="openProblem(event, 'prob1')">Problem 1</button>
+            <button class="tablinks" onclick="openProblem(event, 'prob2')">Problem 2</button>
+            <button class="tablinks" onclick="openProblem(event, 'prob3')">Problem 3</button>
+            <button class="tablinks" onclick="openProblem(event, 'prob4')">Problem 4</button>
+            <button class="tablinks" onclick="openProblem(event, 'prob5')">Problem 5</button>
+          </div>
+
+          <div id="prob1" class="verticalmenucontent" style="color: black; font-weight:bold;">
+            
+            <p style="text-align:center; font-size:18pt;">HTML stands for...</p>
+            <input type="radio" id="A1" name="choice" value="A">
+            <label for="A1">HyperText Markup Language</label><br>
+            <input type="radio" id="B1" name="choice" value="B">
+            <label for="B1">How To Master Language</label><br>
+            <input type="radio" id="C1" name="choice" value="C">
+            <label for="C1">How To Manage Layout</label>
+            <p></p>
+            <br><br>
+            <button class="subbutton" type="button" onclick="checkAnswer()">Submit</button>
+            <div id="disp1" style= "color:black; font-size:18px; font-weight:bold;"> </div> 
+          </div>
+
+          <div id="prob2" class="verticalmenucontent" style="display:none; color:black; font-weight:bold;">
+            
+            <p style="text-align:center; font-size:18pt;">How many HTML 5 heading tags are there?</p> 
+            <input type="radio" id="A2" name="choice" value="A">
+            <label for="A2">3</label><br>
+            <input type="radio" id="B2" name="choice" value="B">
+            <label for="B2">5</label><br>
+            <input type="radio" id="C2" name="choice" value="C">
+            <label for="C2">6</label>
+            <p></p>
+            <br><br>
+            <button class="subbutton" type="button" onclick="checkAnswer()">Submit</button>
+            <div id="disp2" style= "color:black; font-size:18px; font-weight:bold;"> </div> 
+          </div>
+
+          <div id="prob3" class="verticalmenucontent" style="display:none; color:black; font-weight:bold;">
+            
+            <p style="text-align:center; font-size:18pt;">Which tag makes text bold?</p>
+            <input type="radio" id="A3" name="choice" value="A">
+            <label id="question3" for="A3">&lt;p&gt;</label><br>
+            <input type="radio" id="B3" name="choice" value="B">
+            <label for="B3">&lt;b&gt;</label><br>
+            <input type="radio" id="C3" name="choice" value="C">
+            <label for="C3">&lt;i&gt;</label>
+            <p></p>
+            <br><br>
+            <button class="subbutton" type="button" onclick="checkAnswer()">Submit</button>
+            <div id="disp3" style= "color:black; font-size:18px; font-weight:bold;"> </div> 
+          </div>
+    </body> 
+    <script> 
+        function checkAnswer() {  
+            if(document.getElementById('B3').checked) { 
+                document.getElementById("disp3").innerHTML 
+                    = "Correct"; 
+                document.querySelector("label[for='B3']").style.color = "black";
+                document.querySelector("label[for='B3']").style.background = "#bfb";
+                document.querySelector("label[for='B3']").style.border.color = "#4c4";
+                document.querySelector("label[for='A3']").style.color = "black";
+                document.querySelector("label[for='A3']").style.background = "#d44942";
+                document.querySelector("label[for='A3']").style.border.color = "#bd2b24";
+                document.querySelector("label[for='C3']").style.color = "black";
+                document.querySelector("label[for='C3']").style.background = "#d44942";
+                document.querySelector("label[for='C3']").style.border.color = "#bd2b24";
+            } 
+            else if(document.getElementById('C2').checked) { 
+                document.getElementById("disp2").innerHTML 
+                    = "Correct";  
+                    document.querySelector("label[for='C2']").style.color = "black";
+                    document.querySelector("label[for='C2']").style.background = "#bfb";
+                    document.querySelector("label[for='C2']").style.border.color = "green";
+                    document.querySelector("label[for='A2']").style.color = "black";
+                    document.querySelector("label[for='A2']").style.background = "#d44942";
+                    document.querySelector("label[for='A2']").style.border.color = "#bd2b24";
+                    document.querySelector("label[for='B2']").style.color = "black";
+                    document.querySelector("label[for='B2']").style.background = "#d44942";
+                    document.querySelector("label[for='B2']").style.border.color = "#bd2b24";
+            } 
+            else if(document.getElementById('A1').checked) { 
+                document.getElementById("disp1").innerHTML 
+                    = "Correct"; 
+                    document.querySelector("label[for='A1']").style.color = "black";
+                    document.querySelector("label[for='A1']").style.background = "#bfb";
+                    document.querySelector("label[for='A1']").style.border.color = "green";
+                    document.querySelector("label[for='B1']").style.color = "black";
+                    document.querySelector("label[for='B1']").style.background = "#d44942";
+                    document.querySelector("label[for='B1']").style.border.color = "#bd2b24";
+                    document.querySelector("label[for='C1']").style.color = "black";
+                    document.querySelector("label[for='C1']").style.background = "#d44942";
+                    document.querySelector("label[for='C1']").style.border.color = "#bd2b24";
+            } 
+            else { 
+                if(document.getElementById('A3').checked || document.getElementById('C3').checked){
+                    document.getElementById("disp3").innerHTML 
+                        = "Incorrect"; 
+                    document.querySelector("label[for='B3']").style.color = "black";
+                    document.querySelector("label[for='B3']").style.background = "#bfb";
+                    document.querySelector("label[for='B3']").style.border.color = "green";
+                    document.querySelector("label[for='A3']").style.color = "black";
+                    document.querySelector("label[for='A3']").style.background = "#d44942";
+                    document.querySelector("label[for='A3']").style.border.color = "#bd2b24";
+                    document.querySelector("label[for='C3']").style.color = "black";
+                    document.querySelector("label[for='C3']").style.background = "#d44942";
+                    document.querySelector("label[for='C3']").style.border.color = "#bd2b24";
+                }
+                if(document.getElementById('B2').checked || document.getElementById('A2').checked){
+                    document.getElementById("disp2").innerHTML 
+                        = "Incorrect";
+                    document.querySelector("label[for='C2']").style.color = "black";
+                    document.querySelector("label[for='C2']").style.background = "#bfb";
+                    document.querySelector("label[for='C2']").style.border.color = "green";
+                    document.querySelector("label[for='A2']").style.color = "black";
+                    document.querySelector("label[for='A2']").style.background = "#d44942";
+                    document.querySelector("label[for='A2']").style.border.color = "#bd2b24";
+                    document.querySelector("label[for='B2']").style.color = "black";
+                    document.querySelector("label[for='B2']").style.background = "#d44942";
+                    document.querySelector("label[for='B2']").style.border.color = "#bd2b24";
+                }
+                if(document.getElementById('B1').checked || document.getElementById('C1').checked){
+                    document.getElementById("disp1").innerHTML 
+                        = "Incorrect"; 
+                    document.querySelector("label[for='A1']").style.color = "black";
+                    document.querySelector("label[for='A1']").style.background = "#bfb";
+                    document.querySelector("label[for='A1']").style.border.color = "green";
+                    document.querySelector("label[for='B1']").style.color = "black";
+                    document.querySelector("label[for='B1']").style.background = "#d44942";
+                    document.querySelector("label[for='B1']").style.border.color = "#bd2b24";
+                    document.querySelector("label[for='C1']").style.color = "black";
+                    document.querySelector("label[for='C1']").style.background = "#d44942";
+                    document.querySelector("label[for='C1']").style.border.color = "#bd2b24";
+                }
+            } 
+        } 
+    </script>
+
+
+
+
